@@ -7,15 +7,17 @@ xdescribe("tests for definePrime function", () => {
 
     it("should operate correctly with simple number", () => {
         expect(definePrime(simpleNUmber)).toBe(`Number ${simpleNUmber} - prime number`);
-    }),
-        it("should operate correctly with simple number", () => {
-            expect(definePrime(compositeNumber)).toBe(
-                `Number ${compositeNumber} - composite number`
-            );
-        }),
-        it("should operate correctly with simple number", () => {
-            expect(definePrime(toBigNumber)).toBe("data is incorrect");
-        });
+    });
+
+    it("should operate correctly with simple number", () => {
+        expect(definePrime(compositeNumber)).toBe(
+            `Number ${compositeNumber} - composite number`
+        );
+    });
+
+    it("should operate correctly with simple number", () => {
+        expect(definePrime(toBigNumber)).toBe("data is incorrect");
+    });
 });
 
 describe("tests for definePrime function", () => {
@@ -25,7 +27,9 @@ describe("tests for definePrime function", () => {
 
     it("should operate correctly with simple, composite and incorrect number", () => {
         expect(definePrime(simpleNUmber)).toBe(`Number ${simpleNUmber} - prime number`);
-        expect(definePrime(compositeNumber)).toBe(`Number ${compositeNumber} - composite number`);
+        expect(definePrime(compositeNumber)).toBe(
+            `Number ${compositeNumber} - composite number`
+        );
         expect(definePrime(toBigNumber)).toBe("data is incorrect");
     });
 });

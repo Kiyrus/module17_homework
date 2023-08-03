@@ -282,14 +282,33 @@ describe("tests for infoAboutPerson", () => {
         },
     ];
 
+    let listWithOnePerson = [
+        {
+            name: "Walter White",
+            age: 55,
+            gender: "male",
+        }
+    ];
+
+    let listWithNoOnePersons = [];
+
     it("should return name of oldest person and middle age of all persons in list", () => {
         expect(getAgeInfoFromList(personsList)).toBe(
             "Oldest person(s): José Guadalupe Posada Carrillo / Middle age: 50.6"
         );
-    }),
-        it("should return list with all Mikes and middle age of all persons in list", () => {
-            expect(getAgeInfoFromList(listOfCarrillo)).toBe(
-                "Oldest person(s): José Guadalupe Posada Carrillo1, José Guadalupe Posada Carrillo2, José Guadalupe Posada Carrillo3, José Guadalupe Posada Carrillo4 / Middle age: 52.6"
-            );
-        });
+    });
+
+    it("should return list with all José Guadalupe Posada Carrillo and middle age of all persons in list", () => {
+        expect(getAgeInfoFromList(listOfCarrillo)).toBe(
+            "Oldest person(s): José Guadalupe Posada Carrillo1, José Guadalupe Posada Carrillo2, José Guadalupe Posada Carrillo3, José Guadalupe Posada Carrillo4 / Middle age: 52.6"
+        );
+    });
+
+    it("should return 'Not valid list!'", () => {
+        expect(getAgeInfoFromList(listWithOnePerson)).toBe("Not valid list!");
+    });
+
+    it("should return 'Not valid list!'", () => {
+        expect(getAgeInfoFromList(listWithNoOnePersons)).toBe("Not valid list!");
+    });
 });
